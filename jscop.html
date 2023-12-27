@@ -8,23 +8,78 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-theme.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Quicksand&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
+            padding: 0;
             height: 100vh;
             background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
             overflow: auto;
+            font-family: 'Poppins', sans-serif;
             /* Allow scrolling */
             filter: drop-shadow(0 0 10px white);
             overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        .navbar a:hover{
+            border-bottom: 2px solid white;
+            color: lightblue;
+            .navbar{
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: lightblue;
+            border-bottom: 2px solid white;
+        }
+        .navbar-nav {
+            margin:  auto;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-brand img{
+            height: 30px;
         }
 
+        .navbar{
+            background-color: #00000039;
+            font-size: 18px;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+        }
+
+        /* Custom CSS for changing the color of the active link */
+        .navbar-light .navbar-nav .nav-link.active {
+            color: white;
+        }
+
+        /* Custom CSS for changing the color of the dropdown menu items */
+        .navbar-light .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+            color: white;
+        }
+    
         .maincontainer {
             position: relative;
             width: 100%;
@@ -35,6 +90,10 @@
 
         .mainbg {
             position: relative;
+        }
+
+        .main-text{
+            font-family: 'Cinzel', serif;
         }
 
         .mainbg video {
@@ -95,17 +154,14 @@
         }
 
         .jiitstudent {
-            font-family: 'Brush Script MT', cursive, sans-serif;
-            word-spacing: 6px;
+            font-family: 'Poppins', sans-serif;
+            /* word-spacing: 6px; */
             color: green;
             position: absolute;
-            font-style: italic;
-
-
             text-align: center;
             color: white;
             font-size: 28px;
-            font-weight: bold;
+            /* font-weight: bold; */
             z-index: 1;
 
 
@@ -113,7 +169,7 @@
 
         .twomain {
             display: block;
-
+            
         }
 
         .secondsection {
@@ -127,7 +183,7 @@
             @return $random_range;
         }
 
-        .snow {
+        .snow{
             $total: 200;
             position: absolute;
             width: 10px;
@@ -167,7 +223,7 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <!-- <div class="navbar">
         <nav class="mainnav">
             <div class="menuiconnav">
                 <img src="https://jscop.jiitopticachapter.in/static/media/JSCOP_LOGO.609a16129aac205ca1aa.png"
@@ -181,20 +237,56 @@
 
 
         </nav>
-    </div>
+    </div> -->
+
+    
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <div class="container-fluid">
+            <!-- logo -->
+              <a class="navbar-brand" href="#">
+                <img src="./imagematerial/jscop-logo.png" alt="JSCOP">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Timeline</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                  </li>
+              </div>
+
+            </div>
+
+          </nav>
 
 
     <div class="maincontainer">
 
         <div class="mainbg">
             <video autoplay muted loop>
-                <source src="C:\Users\Mayer\Downloads\143673 (Original).mp4" ; type="video/mp4">
+                <source src="./imagematerial/main-page-video.mp4" ; type="video/mp4">
             </video>
         </div>
         <div class="twomain">
-            <span>JSCOP 6.0
+            <span>
+                <div class="main-text">
+                    JSCOP 6.0
+                </div>
                 <div style="opacity: 0.8;" class="jiitstudent">
-                    JIIT STUDENT CONFERENCE FOR OPTICS AND PHOTONICS
+                    <!-- JIIT STUDENT CONFERENCE FOR OPTICS AND PHOTONICS -->
+                    JIIT Student Conference for Optics and Photonics
                 </div>
             </span>
 
@@ -364,7 +456,7 @@
            
 
             <div class="gogo">
-                <img id="movingImage" src="C:\Users\Mayer\OneDrive\Desktop\imagematerial\Santa-Claus-Sleigh-PNG.png" alt="Moving Image">
+                <!-- <img id="movingImage" src="C:\Users\Mayer\OneDrive\Desktop\imagematerial\Santa-Claus-Sleigh-PNG.png" alt="Moving Image"> -->
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
                         const movingImage = document.getElementById('movingImage');
